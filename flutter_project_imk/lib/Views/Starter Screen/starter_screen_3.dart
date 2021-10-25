@@ -12,13 +12,10 @@ class StarterScreen3 extends StatelessWidget {
             children: [
               ClipRect(
                 child: Container(
-                  child: Align(
-                    alignment: Alignment.topLeft,
-                    heightFactor: 1,
-                    child: Image.asset(
-                      "assets/images/awal3.png",
-                      scale: 0.875,
-                    ),
+                  width: MediaQuery.of(context).size.width,
+                  child: Image.asset(
+                    "assets/images/awal3.png",
+                    fit: BoxFit.fill,
                   ),
                 ),
               ),

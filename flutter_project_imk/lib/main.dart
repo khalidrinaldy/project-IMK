@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: StarterScreen1(),
+      home: SplashScreen(),
       onGenerateRoute: Routes.generateRoute,
       debugShowCheckedModeBanner: false,
     );

@@ -1,6 +1,21 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
-class SplashScreen extends StatelessWidget {
+class SplashScreen extends StatefulWidget {
+  @override
+  _SplashScreenState createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    Timer(Duration(seconds: 3), () => Navigator.pushReplacementNamed(context, '/starter1'));
+  }
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,12 +45,12 @@ class SplashScreen extends StatelessWidget {
                 Container(
                   height: 200,
                   width: 200,
-                  child: Image.asset("assets/images/logo.png"),
+                  child: Image.asset("assets/images/logo.png", fit: BoxFit.fill,),
                 ),
                 Container(
                   height: 45,
                   child: Text(
-                    "Co-End",
+                    "CoHealth",
                     style: TextStyle(
                       fontFamily: "Poppins",
                       fontWeight: FontWeight.w600,
